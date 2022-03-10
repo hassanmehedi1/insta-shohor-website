@@ -81,9 +81,12 @@
             <h1>1. What is Event-Loop?</h1>
             <p><span class="span">Ans:</span> From my understanding an event loop can not be described in just few lines but I'll try to make this fit. So first of all we all know that javascript is a single threaded programming language which means that js can execute only one line code at a time. In js it reads code from top to bottom way. In this way if it finds any function or execution context it send those to the call stack. A call stack works in a LIFO way which means last in first out. So if any function takes big time to execute the whole browser can stuck until the function finishes execution. Thats when event loop arrives, so what it does is when someone calls a setTimeout function, js detects it as asynchronous function and as soon as it gets to call stack, the call stack sends it another place called Web-Api. Here the timer gets set and executes for the setTimeout function after the timer finishes it goes to callBack Queue(callBack queue works in FIFO way), where it waits for Call-Stack to get empty. after call-stack finishes all the synchronous functions/executions and gets empty, an Event-loop throws setTimeout task to the call-stack and it gets Executed. So basically an event-loop helps the console to finish tasks that does not need any time immediately without jamming the browser/console and make the code work in more efficient way. </p>
             <br>
-            <br>
-            <h1>2. How does javascript work?</h1>\
-            
+            <h1>2. How does javascript work?</h1>
+            <p><span class="span">Ans:</span>
+             javascript is a browser based programming language. Every browser has a engine to run this javascript language. the most popular engine is V8 engine which is a part of google chrome browser. Other browsers has their own engine like firefox uses spidermonkey, edge uses chakra. It is a single threaded programming language means it is executed line by line or in other words, the js engine translates the Js code line by line and
+            runs it in the same way rather than changing the entire program instantly. These engines has 2 main components which is memory-heap and call-stack. in memory heap all the allocations happen and in call-stack the code gets executed. js also has big things like api-fetch, DOM(document object model), ajax, json. there are few steps to understand how js works. the first step is parser, When we launch a js program, the "parser" inside the JS engine receives our code first. Because JavaScript is an
+            interpretative scripting language, the parser's role is to verify the js code for syntactic mistakes line by
+            line. When an error is identified, the parser throws an error and stops the execution of the code. Second step is abstract syntax tree(ast), The parser builds the AST data structure after checking all js codes and determining that there are no faults, an ast consists or checks many things like. </p>
             
         </footer>
 
